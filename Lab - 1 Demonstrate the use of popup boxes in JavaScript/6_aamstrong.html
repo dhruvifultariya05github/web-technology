@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script>  
+		let a=Number(prompt("Enter number: "));
+		console.log(a);
+
+		 let temp=a;
+		 let length=0;
+		 let power=1;
+		 let ans=0;
+		 while(a!=0){
+		 	length++;
+		 	a=Number.parseInt(a/10);
+		 }
+		 a=temp;
+		 let mod=0;
+		 while(a!=0){
+		 	let power=1;
+		 	mod=a%10;
+		 	for(let i=0;i<length;i++){
+		 		power=power*mod;
+		 	}
+		 	ans=ans+power;
+		 	a=Number.parseInt(a/10);
+		 }
+		 if(temp==ans){
+		 	document.write("number is armstrong");
+		 }
+		 else{
+		 	document.write("number is not armstrong");
+		 }
+	</script>
+</body>
+</html>

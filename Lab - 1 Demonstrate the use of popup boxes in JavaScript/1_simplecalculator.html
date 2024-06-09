@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>simple calculator</title>
+</head>
+<body>
+   <script type="text/javascript">
+   	 a=parseInt(prompt("Enter first number"));
+      b=parseInt(prompt("Enter second number"));
+      ans=(prompt("Enter '+' for addition , Enter '-' for subtraction, Enter '*' for multiplication , Enter '/' for division:"));
+
+     switch(ans){
+     case '+':
+          ans=a+b;
+          document.write(ans);
+          break;
+
+     case '-':
+          ans=a-b;
+          document.write(ans);
+          break;
+
+     case '*':
+          ans=a*b;
+          document.write(ans);
+          break;
+
+     case '/':
+          ans=a/b;
+          document.write(ans);
+          break;
+     }
+   </script>
+</body>
+</html>

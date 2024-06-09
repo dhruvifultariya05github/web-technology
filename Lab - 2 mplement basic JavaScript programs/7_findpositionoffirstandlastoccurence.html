@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Substring Between Vowels</title>
+</head>
+<body>
+    <input type="text" id="inputWord" placeholder="Enter a word">
+    <button onclick="findSubstring()">Find Substring</button>
+    <p id="result"></p>
+
+    <script>
+        function findSubstring() {
+            const word = document.getElementById("inputWord").value;
+            const firstA = word.indexOf('a');
+            const lastA = word.lastIndexOf('a');
+            
+            if (firstA === -1 || lastA === -1 || firstA === lastA) {
+                document.getElementById("result").innerText = "The word does not contain two 'a' characters.";
+            } else {
+                const substring = word.substring(firstA + 1, lastA);
+                document.getElementById("result").innerText = `First occurrence of "a": ${firstA + 1}, Last occurrence of "a": ${lastA + 1}, Substring: "${substring}"`;
+            }
+        }
+    </script>
+</body>
+</html>
